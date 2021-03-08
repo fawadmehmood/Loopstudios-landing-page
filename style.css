@@ -83,26 +83,28 @@ body{
 }
 
 
-.header__nav__link{
+.nav__link{
        display: inline-block;
        margin: 1.5rem;
        color: var(--White);
-       letter-spacing: var(--letter-space);
+       position: relative;
 }
 
-.header__nav__link::after{
+.nav__link::after{
     content: '';
     display: block;
-    width: 0;
     height: 0.1rem;
-    position: relative;
-    top: 0.2rem;
-    background-color: var(--White);
-    transition: all 0.3s ease-in-out;
+    left: 50%;
+    width: 0;
+    position: absolute;
+    bottom: -0.5rem;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 
-.header__nav__link:hover::after{
+.nav__link:hover::after{
     width: 100%;
+    left: 0;
 }
 
 .hamburger__menu{
@@ -283,8 +285,7 @@ body{
 
 /* === strat of portfolio === */
    .portfolio{
-       padding-top: 4rem;
-       padding-bottom: 4rem;
+       padding-bottom: 6rem;
    }
 
 .portfolio__wrapper h2{
@@ -373,6 +374,60 @@ body{
 /* === end of portfolio === */
 
 
+/* === start of footer === */
+   .footer{
+       background-color: var(--Black);
+       padding-top: 4rem;
+       padding-bottom: 4rem;
+       color: var(--White);
+   }
+
+   .footer__wrapper{
+       justify-content: space-between;
+   }
+
+   .footer__top{
+       margin-bottom: 2rem;
+   }
+
+   .footer__nav__link{
+            margin: 0 2rem;
+   }
+
+   .footer__nav__link:first-child{
+       margin-left: 0;
+   }
+
+   .footer__social__links{
+       text-align: right;
+       justify-content: flex-end;
+   }
+
+   .footer__social__links a{
+    color: white;
+    margin: 0 0.8rem;
+}
+
+.footer__copyright{
+    color: var(--Dark-Gray);
+    text-align: center;
+}
+
+.credits{
+    margin-top: 3rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+/* === end of footer === */
+
 
 
 
@@ -389,6 +444,10 @@ body{
 
    .hamburger__menu{
         z-index: 3;
+    }
+
+    .logo_wrapper{
+        z-index: 4;
     }
 
 
@@ -475,7 +534,33 @@ body{
 }
 /* === end of portfolio === */
 
-     }
+
+/* === start of footer === */
+   .footer__wrapper, .footer__nav__list{
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .footer__right{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .footer__nav__link{
+       margin-right: 0;
+       margin-top: 1.5rem;
+   }
+
+   .footer__social__links{
+       justify-content: center;
+       margin-top: 3.5rem;
+   }
+/* === end of footer === */
+
+
+}
 
  @media screen and (max-width: 550px) {
     
